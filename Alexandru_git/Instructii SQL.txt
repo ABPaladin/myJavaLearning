@@ -1,0 +1,44 @@
+Setul de comenzi SQL
+SQL(Limbaj de Interogare Structurala)
+Limbaj utilizat de majoritatea sistemelor de baza dedate relationale
+SELECT 
+-Comnada cea mai utilizat; este folosita pentru obtinirea datelor din bazele de date 
+INSTER,UPDATE,DELETE
+aceste trei comenzi sunt utilizate pentru introducere de noi randuri 
+pentru a schimbari randuri existente cat si stergere randurilor nedorite din tabele bazelor de date.
+Sunt cunoscute ca DML(Data Manipulation Languge)
+CREAT,ALTER,DROP
+sunt utilizate dinamic pentru a crea, utiliza si sterge orice structura de date cum ar fi tabele,indexi
+ele sunt cunoscute ca DDL(Data Definition Languge)
+GRANT,REVOKE
+utilizate pentru a da sau a lua drepturile de acces pentru date si structurile din Oracle;
+Show database;		//Afiseaza o lista cu toate bazele de date care exista
+Use_nume_baza_de_date;  //Alegerea bazei de date cu care vom lucra in continuare
+Show tables;	      //Afiseaza tabele existente in baza de date curenta
+Show columns; 	     //Afiseaza informatie despre coloanele unui tabel
+CREATE Database Nume_baza de date; //Creati o baza de date
+CREATE table tabel_unu(camp_aTEXT);//Cream un tabel cu cimp numit a al carui tip de date este TEXT
+CREATE table tabel_unu(camp_aTEXT,camp_bINT,camp_cTYNIINT) //Cream un tabel cu cimp numit a al carui tip de date este TEXT,un camp numit b in care daatele de pe coloana respectiva vor fi numere intregi si in campul c vor fi inrtoduse doar numere intre -128 si 127
+Drop tabel tabel_unu; //Sterge tabelul numit tabel unu
+Drop Database_Nume; //Sterge o baza de date cu un Nume
+Insert into tabel(camp1,camp2,camp3)  //Introducem tabelul in numarul tabel
+Values(valoarea1,valoarea2,valoarea3) //in camp 1 ,valoara 1,camp2,valoarea2 etc.
+5 coloane dar vream sa introducem numai una sau doua coloane. 
+in asa caz specificam campul si valoarea doar pentru cele pe care le vrem restul le ignoram
+Select * from table; //Afiseaza tot continutul unui tabel
+Select camp1 from tabel //Afiseaza continutul campului din tabel
+Select all from tabel where camp = valoare 1 // Afiseasa campurile a carui continut este egal cu valoarea 1
+Select all from tabel limit 0,3 // Afiseaza din tabel incepand de la prima inregistrare inca trei 
+Select all from tabel limit 10,5 // Afiseaza din tabel incepand de la zecea inregistrare inca cinci
+Update tabel set coloana 1 = //Noua valoarea colo0anei 1 este egala 
+Alter tabel nume_tabel add dat text //adaugarea la tabelul existent a unei coloane numita dat de tip text
+Entitatea Ce-ia ce reprezinta interes pentru clinenti bazei de date
+O entitate se refera la un aspect al realitati obiective care poate fi deosebit de restul universului si poate reprezenta un obiect fizic o activitate un concept etc.
+Orice entitate e descrisa prin atributilele sale. toate entitatile similare ce pot fi descrise prin acelasi atribute, apartin unui si acelasi tip de entitate,
+iar colectia tuturor entitatilor de acelasi tip dintro baza de date constitue o multime de entitati. 
+Coloana un singur element de date stocat intr-un tabel.
+Rand - un set de coloane care impreuna descriu complet o entitate sau anumita actiune, asupra acestei entitati.
+Se mai numeste si inregistrare.
+Cheia Primara - Una sau mai multe coloane care pot fi utilizate ca un identificator unic pentru fiecare rand a tabelului
+Foreign key - o cheie straina este un set de atribute dintrun tabel care se refera la cheia primara a altui tabel
+Cheia externa leaga aceste doaua tabele.
